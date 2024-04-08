@@ -1,9 +1,9 @@
 {
-    "name": "todo-react",
+    "name": "react",
     "version": "1.0.0",
     "description": "",
     "keywords": [],
-    "main": "src/index.js",
+    "main": "src/index.tsx",
     "dependencies": {
         "react": "^18.0.0",
         "react-dom": "^18.0.0",

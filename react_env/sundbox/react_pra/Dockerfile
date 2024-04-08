@@ -2,10 +2,13 @@
 FROM node:latest
 
 # アプリケーションディレクトリを作成
-WORKDIR /usr/src/app
+WORKDIR /src/app
 
 # アプリケーションの依存関係ファイルをコピー
 COPY package*.json ./
+
+# @babel/plugin-proposal-private-property-in-object を追加
+RUN npm install --save-dev @babel/plugin-proposal-private-property-in-object
 
 # 依存関係をインストール
 RUN npm install
