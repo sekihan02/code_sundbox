@@ -229,7 +229,7 @@ def set_context():
     return context
 
 # 初期プロンプト設定関数
-def generate_initial_prompt(section, user_requirements, feedback=None):
+def generate_initial_prompt_srs(section, user_requirements, feedback=None):
     """
     各セクションごとに初期プロンプトを生成する。
     
@@ -285,7 +285,7 @@ def generate_srs(model_name, user_requirements, feedback=None):
     srs = {}
     
     for section in sections:
-        prompt = generate_initial_prompt(section, user_requirements, feedback)
+        prompt = generate_initial_prompt_srs(section, user_requirements, feedback)
         
         response = client.chat.completions.create(
             model=model_name,
